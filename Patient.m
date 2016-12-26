@@ -8,7 +8,16 @@
 
 #import "Patient.h"
 
+
 @implementation Patient
+
+- (BOOL) areYouOk{
+    BOOL isOk = arc4random() % 2;
+    if (!isOk) {
+        [self.delegate patientIsNotOk:self];
+    }
+    return isOk;
+}
 
 - (BOOL) howAreYou{
     BOOL isFine = arc4random() % 2;
@@ -24,6 +33,10 @@
 
 - (void) makeShot{
     NSLog(@"%@, make  shot", self.name);
+}
+
+- (void) hospitalisation{
+    NSLog(@"Hospitalisation %@", self.name);
 }
 
 

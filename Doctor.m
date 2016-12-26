@@ -9,8 +9,29 @@
 #import "Doctor.h"
 
 @implementation Doctor
-// что вас беспокоит
 
+//- (void) typesOfDiseases{
+//    if (patient) {
+//        <#statements#>
+//    }
+//}
+
+- (void) patientIsNotOk: (Patient *) patient{
+    NSLog(@"Patient %@, is not Ok", patient.name);
+        if (patient.temperature >= 37.f) {
+            [patient howAreYou];
+        }
+        if (patient.ill == Cough) {
+            [patient takePill];
+        }else if (patient.ill == BrokenBone){
+            [patient hospitalisation];
+        }else if (patient.ill == Blind){
+            [patient hospitalisation];
+        }else{
+            NSLog(@"Relax");
+        }
+
+}
 
 // если есть температура
 - (void) patientFeelsBad: (Patient *) patient{

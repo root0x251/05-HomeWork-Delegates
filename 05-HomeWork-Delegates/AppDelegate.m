@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "Doctor.h"
+#import "SicknessProtokol.h"
 
 
 @interface AppDelegate ()
@@ -34,31 +35,23 @@
     Patient *patient2 = [Patient new];
     Patient *patient3 = [Patient new];
     Patient *patient4 = [Patient new];
-    Patient *patient5 = [Patient new];
-    Patient *patient6 = [Patient new];
-    Patient *patient7 = [Patient new];
 
 
     patient1.name = @"Roma";
     patient1.temperature = 36.6f;
     
+    
     patient2.name = @"Dima";
     patient2.temperature = 37.2f;
+    patient2.ill = Cough;
     
     patient3.name = @"Oleg";
     patient3.temperature = 37.8f;
+    patient3.ill = BrokenBone;
     
     patient4.name = @"Vlad";
     patient4.temperature = 41.3f;
-    
-    patient5.name = @"Vlad";
-    patient5.temperature = 36.3f;
-
-    patient6.name = @"Vlad";
-    patient6.temperature = 36.6f;
-
-    patient7.name = @"Vlad";
-    patient7.temperature = 36.7f;
+    patient4.ill = Blind;
 
     
     Doctor *doctor = [Doctor new];
@@ -69,17 +62,22 @@
     patient4.delegate = doctor;
 
     
-    NSLog(@"%@ are you okey? %@", patient1.name, [patient1 howAreYou]? @"Yes" : @"No");
-    NSLog(@"=======");
+    NSLog(@"%@ are you okey? %@", patient1.name, [patient1 areYouOk]? @"Yes" : @"No");
     
-    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 howAreYou]? @"Yes" : @"No");
-    NSLog(@"=======");
     
-    NSLog(@"%@ are you okey? %@", patient3.name, [patient3 howAreYou]? @"Yes" : @"No");
-    NSLog(@"=======");
     
-    NSLog(@"%@ are you okey? %@", patient4.name, [patient4 howAreYou]? @"Yes" : @"No");
-    NSLog(@"=======");
+    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 areYouOk]? @"Yes" : @"No");
+    
+//    NSLog(@"=======");
+//    
+//    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 howAreYou]? @"Yes" : @"No");
+//    NSLog(@"=======");
+//    
+//    NSLog(@"%@ are you okey? %@", patient3.name, [patient3 howAreYou]? @"Yes" : @"No");
+//    NSLog(@"=======");
+//    
+//    NSLog(@"%@ are you okey? %@", patient4.name, [patient4 howAreYou]? @"Yes" : @"No");
+//    NSLog(@"=======");
 
     
     return YES;

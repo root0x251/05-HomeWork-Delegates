@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F93450F51E11B29E00D23A3E /* SicknessProtokol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SicknessProtokol.h; sourceTree = "<group>"; };
 		F9B8514C1E11081400C59EDF /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = ../Patient.h; sourceTree = "<group>"; };
 		F9B8514D1E11081400C59EDF /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = ../Patient.m; sourceTree = "<group>"; };
 		F9B8514F1E11081E00C59EDF /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Doctor.h; path = ../Doctor.h; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		F9F85C141E10586B00A11B28 /* 05-HomeWork-Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				F93450F51E11B29E00D23A3E /* SicknessProtokol.h */,
 				F9F85C181E10586C00A11B28 /* AppDelegate.h */,
 				F9F85C191E10586C00A11B28 /* AppDelegate.m */,
 				F9B8514C1E11081400C59EDF /* Patient.h */,

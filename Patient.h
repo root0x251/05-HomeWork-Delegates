@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SicknessProtokol.h"
 #import <CoreGraphics/CoreGraphics.h>
 
 
@@ -18,19 +19,21 @@
 @property (assign, nonatomic) CGFloat temperature;
 @property (weak, nonatomic) id <PatientDelegate> delegate;
 
+#pragma mark - SicknessProtokol.h
+@property (assign, nonatomic) TypesOfDiseases ill;          // вид болячки
+
+
+- (BOOL) areYouOk;
 - (BOOL) howAreYou;
 - (void) takePill;
 - (void) makeShot;
-//- (BOOL) youShure;
-
-
-
+- (void) hospitalisation;
 
 
 @end
 
 @protocol PatientDelegate <NSObject>
-
+- (void) patientIsNotOk: (Patient *) patient;
 - (void) patientFeelsBad: (Patient *) patient;
 - (void) patientHospitalisation: (Patient *) patient;
 - (void) patient: (Patient *) patient hasQuestion: (NSString *) question;
