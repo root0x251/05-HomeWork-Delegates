@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9B8514E1E11081400C59EDF /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B8514D1E11081400C59EDF /* Patient.m */; };
+		F9B851511E11081E00C59EDF /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B851501E11081E00C59EDF /* Doctor.m */; };
 		F9F85C171E10586C00A11B28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C161E10586C00A11B28 /* main.m */; };
 		F9F85C1A1E10586C00A11B28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C191E10586C00A11B28 /* AppDelegate.m */; };
 		F9F85C1D1E10586C00A11B28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C1C1E10586C00A11B28 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9B8514C1E11081400C59EDF /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = ../Patient.h; sourceTree = "<group>"; };
+		F9B8514D1E11081400C59EDF /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = ../Patient.m; sourceTree = "<group>"; };
+		F9B8514F1E11081E00C59EDF /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Doctor.h; path = ../Doctor.h; sourceTree = "<group>"; };
+		F9B851501E11081E00C59EDF /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Doctor.m; path = ../Doctor.m; sourceTree = "<group>"; };
 		F9F85C121E10586B00A11B28 /* 05-HomeWork-Delegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "05-HomeWork-Delegates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F85C161E10586C00A11B28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9F85C181E10586C00A11B28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 			children = (
 				F9F85C181E10586C00A11B28 /* AppDelegate.h */,
 				F9F85C191E10586C00A11B28 /* AppDelegate.m */,
+				F9B8514C1E11081400C59EDF /* Patient.h */,
+				F9B8514D1E11081400C59EDF /* Patient.m */,
+				F9B8514F1E11081E00C59EDF /* Doctor.h */,
+				F9B851501E11081E00C59EDF /* Doctor.m */,
 				F9F85C1B1E10586C00A11B28 /* ViewController.h */,
 				F9F85C1C1E10586C00A11B28 /* ViewController.m */,
 				F9F85C1E1E10586C00A11B28 /* Main.storyboard */,
@@ -274,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F85C1D1E10586C00A11B28 /* ViewController.m in Sources */,
+				F9B8514E1E11081400C59EDF /* Patient.m in Sources */,
 				F9F85C1A1E10586C00A11B28 /* AppDelegate.m in Sources */,
 				F9F85C171E10586C00A11B28 /* main.m in Sources */,
+				F9B851511E11081E00C59EDF /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +519,7 @@
 				F9F85C411E10586C00A11B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9F85C421E10586C00A11B28 /* Build configuration list for PBXNativeTarget "05-HomeWork-DelegatesTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +528,7 @@
 				F9F85C441E10586C00A11B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9F85C451E10586C00A11B28 /* Build configuration list for PBXNativeTarget "05-HomeWork-DelegatesUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +537,7 @@
 				F9F85C471E10586C00A11B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

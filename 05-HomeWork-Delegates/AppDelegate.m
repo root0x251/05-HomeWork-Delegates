@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Patient.h"
+#import "Doctor.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +20,68 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+#pragma mark - ShoolBoy lvl
+//    Ученик:
+//    
+//    1. Создать пару пациентов и доктора по тому же принципу что и в видео. (Доктор делегат у пациентов)
+//    2. У пациента пусть будет температура и другие симптомы, по которым доктор может принимать решение.
+//    3. У пациента сделайте метод типа стало хуже и пусть когда станет хуже, то он идет к доктору
+//    4. Всех пациентов объедините в массив и в цикле вызовите метод "стало хуже".
+//    5. Доктор должен лечить каждого согласно симптомам.
+    
+    Patient *patient1 = [Patient new];
+    Patient *patient2 = [Patient new];
+    Patient *patient3 = [Patient new];
+    Patient *patient4 = [Patient new];
+    Patient *patient5 = [Patient new];
+    Patient *patient6 = [Patient new];
+    Patient *patient7 = [Patient new];
+
+
+    patient1.name = @"Roma";
+    patient1.temperature = 36.6f;
+    
+    patient2.name = @"Dima";
+    patient2.temperature = 37.2f;
+    
+    patient3.name = @"Oleg";
+    patient3.temperature = 37.8f;
+    
+    patient4.name = @"Vlad";
+    patient4.temperature = 41.3f;
+    
+    patient5.name = @"Vlad";
+    patient5.temperature = 36.3f;
+
+    patient6.name = @"Vlad";
+    patient6.temperature = 36.6f;
+
+    patient7.name = @"Vlad";
+    patient7.temperature = 36.7f;
+
+    
+    Doctor *doctor = [Doctor new];
+    
+    patient1.delegate = doctor;
+    patient2.delegate = doctor;
+    patient3.delegate = doctor;
+    patient4.delegate = doctor;
+
+    
+    NSLog(@"%@ are you okey? %@", patient1.name, [patient1 howAreYou]? @"Yes" : @"No");
+    NSLog(@"=======");
+    
+    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 howAreYou]? @"Yes" : @"No");
+    NSLog(@"=======");
+    
+    NSLog(@"%@ are you okey? %@", patient3.name, [patient3 howAreYou]? @"Yes" : @"No");
+    NSLog(@"=======");
+    
+    NSLog(@"%@ are you okey? %@", patient4.name, [patient4 howAreYou]? @"Yes" : @"No");
+    NSLog(@"=======");
+
+    
     return YES;
 }
 
