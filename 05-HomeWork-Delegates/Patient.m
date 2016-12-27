@@ -35,4 +35,22 @@
     NSLog(@"Patient %@, make a shot", self.name);
 }
 
+// так лечит плохой доктор
+
+- (void) gargl{     // полоскать горло
+    NSLog(@"%@, needs to gargle", self.name);
+}
+
+- (void) rubbing{   // обтирание
+    NSLog(@"%@, needs to rubbing", self.name);
+}
+
+- (BOOL) worseDoctorIdiot{      // стало хуже
+    BOOL isFeelBad = arc4random() % 2;
+    if (isFeelBad) {
+        NSLog(@"After you treatment, the %@ became ill", self.name);
+        [self.delegateDoctorIdiot patientHospitalisation:self];
+    }
+    return isFeelBad;
+}
 @end

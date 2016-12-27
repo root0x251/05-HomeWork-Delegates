@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F9C8F7421E125C54009B81E2 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C8F7411E125C54009B81E2 /* Patient.m */; };
 		F9C8F7451E125C5D009B81E2 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C8F7441E125C5D009B81E2 /* Doctor.m */; };
+		F9F0ACFA1E12E2D200569FB3 /* DoctorIdion.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F0ACF91E12E2D200569FB3 /* DoctorIdion.m */; };
 		F9F85C171E10586C00A11B28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C161E10586C00A11B28 /* main.m */; };
 		F9F85C1A1E10586C00A11B28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C191E10586C00A11B28 /* AppDelegate.m */; };
 		F9F85C1D1E10586C00A11B28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F85C1C1E10586C00A11B28 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		F9C8F7411E125C54009B81E2 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		F9C8F7431E125C5D009B81E2 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		F9C8F7441E125C5D009B81E2 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		F9F0ACF81E12E2D200569FB3 /* DoctorIdion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoctorIdion.h; path = ../DoctorIdion.h; sourceTree = "<group>"; };
+		F9F0ACF91E12E2D200569FB3 /* DoctorIdion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoctorIdion.m; path = ../DoctorIdion.m; sourceTree = "<group>"; };
 		F9F85C121E10586B00A11B28 /* 05-HomeWork-Delegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "05-HomeWork-Delegates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F85C161E10586C00A11B28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9F85C181E10586C00A11B28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				F9C8F7411E125C54009B81E2 /* Patient.m */,
 				F9C8F7431E125C5D009B81E2 /* Doctor.h */,
 				F9C8F7441E125C5D009B81E2 /* Doctor.m */,
+				F9F0ACF81E12E2D200569FB3 /* DoctorIdion.h */,
+				F9F0ACF91E12E2D200569FB3 /* DoctorIdion.m */,
 				F9F85C1B1E10586C00A11B28 /* ViewController.h */,
 				F9F85C1C1E10586C00A11B28 /* ViewController.m */,
 				F9F85C1E1E10586C00A11B28 /* Main.storyboard */,
@@ -287,6 +292,7 @@
 				F9C8F7421E125C54009B81E2 /* Patient.m in Sources */,
 				F9F85C1A1E10586C00A11B28 /* AppDelegate.m in Sources */,
 				F9F85C171E10586C00A11B28 /* main.m in Sources */,
+				F9F0ACFA1E12E2D200569FB3 /* DoctorIdion.m in Sources */,
 				F9C8F7451E125C5D009B81E2 /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

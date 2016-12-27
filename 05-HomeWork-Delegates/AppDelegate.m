@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "Doctor.h"
+#import "DoctorIdion.h"
+
+
 
 
 
@@ -30,10 +33,21 @@
 //    3. У пациента сделайте метод типа стало хуже и пусть когда станет хуже, то он идет к доктору
 //    4. Всех пациентов объедините в массив и в цикле вызовите метод "стало хуже".
 //    5. Доктор должен лечить каждого согласно симптомам.
+
+
+    //    Студент:
+    //
+    //    6. Создайте другой класс доктора, не наследника от первого доктора, например друг :)
+    //    7. этот друг должен лечить своих пациентов своими собственными методами и короче плохой он доктор
+    //    8. пусть кто-то ходит к врачу, а кто-то к нему
+    //    9. создайте пару разных объектов класса друг и пусть они лечат своих пациентов (чтобы понять что делегат это не класс, а объект)
+
     
     Patient *patient1 = [Patient new];
     Patient *patient2 = [Patient new];
     Patient *patient3 = [Patient new];
+    Patient *patient4 = [Patient new];
+    Patient *patient5 = [Patient new];
     
     patient1.name = @"Roma";
     patient1.temperature = 36.6;
@@ -42,61 +56,58 @@
     patient2.temperature = 38.5f;
     
     patient3.name = @"Sasha";
-    patient3.temperature = 43.5;
+    patient3.temperature = 38.2f;
+    
+    patient4.name = @"Oleg";
+    patient4.temperature = 43.5f;
+    
+    patient5.name = @"Dima";
+    patient5.temperature = 36.5f;
     
     Doctor *doctor = [Doctor new];
     
-    patient1.delegate = doctor;
-    patient2.delegate = doctor;
-    patient3.delegate = doctor;
+#pragma mark - Student
     
-
-
+    DoctorIdion *doctorIdiot = [DoctorIdion new];
     
-    // если пациенту стало плохо, то выполняется поход к доктору
-//    if ([patient1 worse] == TRUE) {
-//        NSLog(@"%@, are you ok? %@", patient1.name, [patient1 areYouOk]? @"Yes" : @"No");
-//    }else{
-//        NSLog(@"%@, is ok", patient1.name);
-//    }
-//    NSLog(@"%@", null);
-//    
-//    if ([patient2 worse] == TRUE) {
-//        NSLog(@"%@, are you ok? %@", patient2.name, [patient2 areYouOk]? @"Yes" : @"No");
-//    }else{
-//        NSLog(@"%@, is ok", patient2.name);
-//    }
-//    NSLog(@"%@", null);
-//    
-//    if ([patient3 worse] == TRUE) {
-//        NSLog(@"%@, are you ok? %@", patient3.name, [patient3 areYouOk]? @"Yes" : @"No");
-//    }else{
-//        NSLog(@"%@, is ok", patient3.name);
-//    }
-//    NSLog(@"%@", null);
-    
-    
-    
-    NSArray *arrayPatient = @[patient1, patient2, patient3];
+    NSArray *arrayPatient = @[patient1, patient2, patient3, patient4, patient5];
     for (id obj in arrayPatient) {
-        if ([obj worse] == TRUE) {
-            NSLog(@"%@, are you ok? %@", [obj name], [patient3 areYouOk]? @"Yes" : @"No");
-        }else{
+        if (arc4random() % 2) {
+            [obj setDelegate:doctor];
+            NSLog(@"===========Doctor============");
+            if ([obj worse] == TRUE) {
+                NSLog(@"%@, are you ok? %@", [obj name], [obj areYouOk]? @"Yes" : @"No");
+            }else{
             NSLog(@"%@, is ok", [obj name]);
+            }
+        }else{
+            [obj setDelegate:doctorIdiot];
+            NSLog(@"===========Doctor - IDIOT============");
+            if ([obj worse] == TRUE) {
+                NSLog(@"%@, are you ok? %@", [obj name], [obj areYouOk]? @"Yes" : @"No");
+            }else{
+                NSLog(@"%@, is ok", [obj name]);
+            }
         }
     }
+
+    
+
+    
+
     
 
 
 
-#pragma mark - Student
-//    Студент:
-//    
-//    6. Создайте другой класс доктора, не наследника от первого доктора, например друг :)
-//    7. этот друг должен лечить своих пациентов своими собственными методами и короче плохой он доктор
-//    8. пусть кто-то ходит к врачу, а кто-то к нему
-//    9. создайте пару разных объектов класса друг и пусть они лечат своих пациентов (чтобы понять что делегат это не класс, а объект)
 
+
+
+    
+    
+    
+    
+    
+    
 #pragma mark - Master
 //    Мастер:
 //    

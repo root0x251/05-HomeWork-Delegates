@@ -22,7 +22,7 @@
 }
 
 - (void) patientHospitalisation: (Patient *) patient{
-    NSLog(@"Patient %@ goes to the reseption", patient.name);     // пациент идет на обследование 
+    NSLog(@"Patient %@ goes to the inspection", patient.name);     // пациент идет на обследование
 }
 
 - (void) patient: (Patient *) patient hasQuestion: (NSString *) question{
