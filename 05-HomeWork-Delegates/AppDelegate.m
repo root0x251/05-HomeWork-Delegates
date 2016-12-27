@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "Doctor.h"
-#import "SicknessProtokol.h"
+
 
 
 @interface AppDelegate ()
@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+//    id null = @"=================";
 #pragma mark - ShoolBoy lvl
 //    Ученик:
 //    
@@ -34,51 +34,83 @@
     Patient *patient1 = [Patient new];
     Patient *patient2 = [Patient new];
     Patient *patient3 = [Patient new];
-    Patient *patient4 = [Patient new];
-
-
+    
     patient1.name = @"Roma";
-    patient1.temperature = 36.6f;
+    patient1.temperature = 36.6;
     
+    patient2.name = @"Vlad";
+    patient2.temperature = 38.5f;
     
-    patient2.name = @"Dima";
-    patient2.temperature = 37.2f;
-    patient2.ill = Cough;
-    
-    patient3.name = @"Oleg";
-    patient3.temperature = 37.8f;
-    patient3.ill = BrokenBone;
-    
-    patient4.name = @"Vlad";
-    patient4.temperature = 41.3f;
-    patient4.ill = Blind;
-
+    patient3.name = @"Sasha";
+    patient3.temperature = 43.5;
     
     Doctor *doctor = [Doctor new];
     
     patient1.delegate = doctor;
     patient2.delegate = doctor;
     patient3.delegate = doctor;
-    patient4.delegate = doctor;
+    
+
 
     
-    NSLog(@"%@ are you okey? %@", patient1.name, [patient1 areYouOk]? @"Yes" : @"No");
-    
-    
-    
-    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 areYouOk]? @"Yes" : @"No");
-    
-//    NSLog(@"=======");
+    // если пациенту стало плохо, то выполняется поход к доктору
+//    if ([patient1 worse] == TRUE) {
+//        NSLog(@"%@, are you ok? %@", patient1.name, [patient1 areYouOk]? @"Yes" : @"No");
+//    }else{
+//        NSLog(@"%@, is ok", patient1.name);
+//    }
+//    NSLog(@"%@", null);
 //    
-//    NSLog(@"%@ are you okey? %@", patient2.name, [patient2 howAreYou]? @"Yes" : @"No");
-//    NSLog(@"=======");
+//    if ([patient2 worse] == TRUE) {
+//        NSLog(@"%@, are you ok? %@", patient2.name, [patient2 areYouOk]? @"Yes" : @"No");
+//    }else{
+//        NSLog(@"%@, is ok", patient2.name);
+//    }
+//    NSLog(@"%@", null);
 //    
-//    NSLog(@"%@ are you okey? %@", patient3.name, [patient3 howAreYou]? @"Yes" : @"No");
-//    NSLog(@"=======");
-//    
-//    NSLog(@"%@ are you okey? %@", patient4.name, [patient4 howAreYou]? @"Yes" : @"No");
-//    NSLog(@"=======");
+//    if ([patient3 worse] == TRUE) {
+//        NSLog(@"%@, are you ok? %@", patient3.name, [patient3 areYouOk]? @"Yes" : @"No");
+//    }else{
+//        NSLog(@"%@, is ok", patient3.name);
+//    }
+//    NSLog(@"%@", null);
+    
+    
+    
+    NSArray *arrayPatient = @[patient1, patient2, patient3];
+    for (id obj in arrayPatient) {
+        if ([obj worse] == TRUE) {
+            NSLog(@"%@, are you ok? %@", [obj name], [patient3 areYouOk]? @"Yes" : @"No");
+        }else{
+            NSLog(@"%@, is ok", [obj name]);
+        }
+    }
+    
 
+
+
+#pragma mark - Student
+//    Студент:
+//    
+//    6. Создайте другой класс доктора, не наследника от первого доктора, например друг :)
+//    7. этот друг должен лечить своих пациентов своими собственными методами и короче плохой он доктор
+//    8. пусть кто-то ходит к врачу, а кто-то к нему
+//    9. создайте пару разных объектов класса друг и пусть они лечат своих пациентов (чтобы понять что делегат это не класс, а объект)
+
+#pragma mark - Master
+//    Мастер:
+//    
+//    10. Создайте список частей тела в делегате пациента (голова, живот, нога и тд) и когда пациент приходит к врачу, пусть говорит что болит.
+//    11. Доктор должен принимать во внимание что болит
+//    12. Создайте у доктора метод "рапорт". Пусть в конце дня, когда все уже нажаловались достаточно, доктор составит рапорт (выдаст имена) тех у кого болит голова, потом тех у кого болел живот и тд
+
+#pragma mark - SuperMan
+//    Супермен
+//    
+//    13. Создайте в классе пациента проперти - оценка доктору.
+//    14. Когда доктор вам назначает лечение некоторые пациенты должны стать недовольны.
+//    15. В конце дня после того как все лечение будет сделано и доктор напишет рапорт, надо пройтись по пациентам и всем недовольным поменять доктора.
+//    16. Начать новый день и убедиться что Недовольные пациенты таки поменяли доктора.
     
     return YES;
 }
