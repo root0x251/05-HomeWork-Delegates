@@ -53,4 +53,26 @@
     }
     return isFeelBad;
 }
+
+- (BOOL) patientFeelSick{
+    NSLog(@"i have %d",self.ill);
+    BOOL feelSick = arc4random() % 2;
+    if (feelSick) {
+        [self.delegate patientBobyAcher:self];
+    }
+    return feelSick;
+}
+
+// таблетка от головной боли
+- (void) headachPill{
+    NSLog(@"Patient %@ take a headache pill", self.name);
+}
+// таблетка от боли в животе
+- (void) stomachAchePill{
+    NSLog(@"Patient %@ take a stomach ache pill", self.name);
+}
+// рентген
+- (void) xRay{
+    NSLog(@"%@, go for x-Ray", self.name);
+}
 @end

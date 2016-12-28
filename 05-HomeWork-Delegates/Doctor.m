@@ -21,6 +21,16 @@
     }
 }
 
+- (void) patientBobyAcher: (Patient *) patient{
+    if (patient.ill == headache) {
+        [patient headachPill];
+    }else if (patient.ill == soreLeg){
+        [patient xRay];
+    }else{
+        [patient stomachAchePill];
+    }
+}
+
 - (void) patientHospitalisation: (Patient *) patient{
     NSLog(@"Patient %@ goes to the inspection", patient.name);     // пациент идет на обследование
 }

@@ -14,7 +14,7 @@
     if (patient.temperature >= 36.f && patient.temperature <=37.f) {
         [patient makeShot];
     }else if (patient.temperature >38.f && patient.temperature <= 41.f) {
-        NSLog(@"%@, wash your hands frequently", patient.name);
+        [patient rubbing];
     }else if (patient.temperature >38.f && patient.temperature <= 41.f) {
         NSLog(@"%@, sorry, i have lunch  =) ", patient.name);
     }

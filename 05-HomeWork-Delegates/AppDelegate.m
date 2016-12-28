@@ -42,7 +42,6 @@
     //    8. пусть кто-то ходит к врачу, а кто-то к нему
     //    9. создайте пару разных объектов класса друг и пусть они лечат своих пациентов (чтобы понять что делегат это не класс, а объект)
 
-    
     Patient *patient1 = [Patient new];
     Patient *patient2 = [Patient new];
     Patient *patient3 = [Patient new];
@@ -51,23 +50,25 @@
     
     patient1.name = @"Roma";
     patient1.temperature = 36.6;
+    patient1.ill = headache;
     
     patient2.name = @"Vlad";
     patient2.temperature = 38.5f;
+    patient2.ill = stomachРurts;
     
     patient3.name = @"Sasha";
     patient3.temperature = 38.2f;
+    patient3.ill = soreLeg;
     
     patient4.name = @"Oleg";
     patient4.temperature = 43.5f;
+    patient4.ill = headache;
     
     patient5.name = @"Dima";
     patient5.temperature = 36.5f;
+    patient5.ill = soreLeg;
     
     Doctor *doctor = [Doctor new];
-    
-#pragma mark - Student
-    
     DoctorIdion *doctorIdiot = [DoctorIdion new];
     
     NSArray *arrayPatient = @[patient1, patient2, patient3, patient4, patient5];
@@ -75,12 +76,15 @@
         if (arc4random() % 2) {
             [obj setDelegate:doctor];
             NSLog(@"===========Doctor============");
-            if ([obj worse] == TRUE) {
+            if ([obj ill]) {
+                [obj patientFeelSick];
+            }else if ([obj worse] == TRUE) {
                 NSLog(@"%@, are you ok? %@", [obj name], [obj areYouOk]? @"Yes" : @"No");
             }else{
             NSLog(@"%@, is ok", [obj name]);
             }
         }else{
+#pragma mark - Studemt
             [obj setDelegate:doctorIdiot];
             NSLog(@"===========Doctor - IDIOT============");
             if ([obj worse] == TRUE) {
@@ -91,22 +95,6 @@
         }
     }
 
-    
-
-    
-
-    
-
-
-
-
-
-
-    
-    
-    
-    
-    
     
 #pragma mark - Master
 //    Мастер:
