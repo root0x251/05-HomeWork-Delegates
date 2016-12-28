@@ -64,7 +64,7 @@
     patient4.temperature = 43.5f;
     patient4.ill = headache;
     
-    patient5.name = @"Dima";
+    patient5.name = @"Alex";
     patient5.temperature = 36.5f;
     patient5.ill = soreLeg;
     
